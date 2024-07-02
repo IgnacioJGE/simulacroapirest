@@ -18,7 +18,7 @@ export default async function updatePerson(req: Request, res: Response) {
                 await ModeloPerosn.findByIdAndUpdate(id, {phone: phone, country: validopais, city: ciudad })
                 return res.status(200).send({
                     id: existe._id,
-                    name: name,
+                    name: existe.name,
                     phone: phone,
                     country: validopais,
                     city: ciudad,
